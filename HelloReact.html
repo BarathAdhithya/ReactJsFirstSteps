@@ -13,20 +13,24 @@
     */  
 
     class Hell extends React.Component {
+
+        constructor(){
+            super();
+            this.state = {
+                message: "my friend (from state)!"
+            };
+        }
+    
         render(){
-            return <h1> Hell {this.props.hellMessage}</h1>;
+            return <h1> Hell {this.state.message}</h1>;
         }
     }
 
-    // class Heaven extends React.Component {
-    //     render(){
-    //         return <h3> Heaven {this.props.heavenMessage} </h3>;
-    //     }
-    // }
+
+    
 
     ReactDOM.render(
         <Hell hellMessage = "my friend shiva"/>,
-        //<Heaven heavenMessage = "my love Shiva"/>,
         document.getElementById("root")
     );
       
